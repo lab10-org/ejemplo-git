@@ -1,68 +1,93 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
+    <div className="flex flex-col flex-1 items-center bg-zinc-50 font-sans dark:bg-black">
+      <main className="flex w-full max-w-3xl flex-col gap-12 py-24 px-6 sm:px-16">
+        <header className="flex flex-col gap-4 text-center sm:text-left">
+          <h1 className="text-4xl font-semibold tracking-tight text-black dark:text-zinc-50">
+            Git &amp; GitHub
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="text-lg leading-8 text-zinc-600 dark:text-zinc-400">
+            Un proyecto de ejemplo para entender qué son, en qué se
+            diferencian y cómo se usan juntos en el día a día.
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+        </header>
+
+        <section className="flex flex-col gap-3">
+          <h2 className="text-2xl font-semibold text-black dark:text-zinc-50">
+            ¿Qué es Git?
+          </h2>
+          <p className="leading-7 text-zinc-600 dark:text-zinc-400">
+            Git es un sistema de control de versiones: guarda el historial de
+            cambios de un proyecto en tu computador, para que puedas ver qué
+            cambió, cuándo y por qué, volver atrás si algo sale mal, y
+            trabajar en paralelo usando ramas sin pisar el trabajo de otros.
+            Corre localmente, sin necesitar internet.
+          </p>
+        </section>
+
+        <section className="flex flex-col gap-3">
+          <h2 className="text-2xl font-semibold text-black dark:text-zinc-50">
+            ¿Qué es GitHub?
+          </h2>
+          <p className="leading-7 text-zinc-600 dark:text-zinc-400">
+            GitHub es un servicio en la nube que aloja repositorios de Git.
+            Permite compartir el código con otras personas, colaborar en
+            equipo mediante Pull Requests, revisar cambios, y respaldar el
+            historial fuera de tu computador. Git es la herramienta;
+            GitHub es uno de los lugares donde puedes guardar y compartir lo
+            que Git versiona.
+          </p>
+        </section>
+
+        <section className="flex flex-col gap-3">
+          <h2 className="text-2xl font-semibold text-black dark:text-zinc-50">
+            Flujo básico
+          </h2>
+          <ol className="flex flex-col gap-2 leading-7 text-zinc-600 dark:text-zinc-400">
+            <li>
+              <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
+                git init
+              </code>{" "}
+              — inicializa un repositorio en la carpeta actual.
+            </li>
+            <li>
+              <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
+                git add
+              </code>{" "}
+              y{" "}
+              <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
+                git commit
+              </code>{" "}
+              — guardan un cambio en el historial local.
+            </li>
+            <li>
+              <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
+                git checkout -b
+              </code>{" "}
+              — crea una rama para trabajar sin afectar{" "}
+              <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
+                main
+              </code>
+              .
+            </li>
+            <li>
+              <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
+                git push
+              </code>{" "}
+              — sube el historial local a GitHub.
+            </li>
+          </ol>
+          <p className="leading-7 text-zinc-600 dark:text-zinc-400">
+            Ver el detalle de cada comando en el{" "}
+            <a
+              href="https://github.com/lab10-org/ejemplo-git#readme"
+              className="font-medium text-zinc-950 underline dark:text-zinc-50"
+            >
+              README
+            </a>{" "}
+            del proyecto.
+          </p>
+        </section>
       </main>
     </div>
   );
